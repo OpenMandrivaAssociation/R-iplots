@@ -3,7 +3,7 @@
 
 Name:             R-%{packname}
 Version:          1.1_4
-Release:          1
+Release:          2
 Summary:          iPlots - interactive graphics for R
 Group:            Sciences/Mathematics
 License:          GPL-2
