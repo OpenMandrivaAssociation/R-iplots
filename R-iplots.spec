@@ -2,19 +2,19 @@
 %global rlibdir  %{_datadir}/R/library
 
 Name:             R-%{packname}
-Version:          1.1_4
-Release:          2
+Version:          1.1.6
+Release:          1
 Summary:          iPlots - interactive graphics for R
 Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.1-4.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/iplots_1.1-6.tar.gz
 BuildArch:        noarch
 Requires:         R-core
 Requires:         R-methods R-rJava 
-Requires:         R-maps R-MASS 
+Requires:         R-maps R-MASS R-png
 BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-methods R-rJava
-BuildRequires:    R-maps R-MASS 
+BuildRequires:    R-maps R-MASS R-png
 BuildRequires:    java-rpmbuild
 BuildRequires:    x11-server-xvfb
 
@@ -46,10 +46,12 @@ ln -sf %{rlibdir}/java/iplots.jar %{buildroot}%{_javadir}/iplots.jar
 %doc %{rlibdir}/%{packname}/DESCRIPTION
 %doc %{rlibdir}/%{packname}/NEWS
 %{rlibdir}/%{packname}/INDEX
-%{rlibdir}/%{packname}/LICENSE
 %{rlibdir}/%{packname}/NAMESPACE
 %{rlibdir}/%{packname}/Meta
 %{rlibdir}/%{packname}/R
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/java
 %{_javadir}/iplots.jar
+
+
+
